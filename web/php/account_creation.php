@@ -28,7 +28,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 // Creates a new user in the player table
 require("heroku_access.php");
 $db = get_db();
-$query = 'INSERT INTO player(username, password, firstname, lastname, admin_type) VALUES(:username, :password, :firstname, :lastname, :admin_type)';
+$query = 'INSERT INTO users(username, password, firstname, lastname, admin_type) VALUES(:username, :password, :firstname, :lastname, :admin_type)';
 $new_account = $db->prepare($query);
 $new_account->bindValue(':username', $username);
 $new_account->bindValue(':password', $hashedPassword);
@@ -37,7 +37,7 @@ $new_account->bindValue(':lastname', $lastname);
 $new_account->bindValue(':admin_type', $admin_type);
 $new_account->execute();
 
-// Retrieves newly created id for a user so it can be used for the other tables
+/* Retrieves newly created id for a user so it can be used for the other tables
 try{
 $query = 'SELECT id FROM player WHERE username = :username';
 $push_id = $db->prepare($query);
@@ -74,22 +74,7 @@ catch (Exception $ex)
 {
     echo "ERROR: Could not create new id in profile table. Details: $ex";
     die();
-}
-
-// Creates a new conversation row to store a conversation
-try {
-$query = 'INSERT INTO conversation(player_id) VALUES(:id)';
-$profile_id = $db->prepare($query);
-$profile_id->bindValue(':id', $id);
-$profile_id->execute();
-}
-catch (Exception $ex)
-{
-    echo "ERROR: Could not create new id in conversation table. Details: $ex";
-    die();
-}
-
-
+} */
 
 header("Location: login.php");
 die();
