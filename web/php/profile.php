@@ -46,7 +46,7 @@
 		
 	} catch (PDOException $e) {
 		$error_message = $e->getMessage();
-		echo "<p>Database error: $error_message </p>";
+		echo "<p>Database error: Second try & $error_message </p>";
 		exit();
 	}
 	try {
@@ -58,7 +58,7 @@
 		$statement->closeCursor();
 	} catch (PDOException $e) {
 		$error_message = $e->getMessage();
-		echo "<p>Database error: $error_message </p>";
+		echo "<p>Database error: Third try & $error_message </p>";
 		exit();
 	}
 ?>
