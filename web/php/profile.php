@@ -36,9 +36,9 @@
 		$statement->bindValue(':password', $password);
 		$statement->execute();
 		
-		$user = $statement->fetch(PDO::FETCH_ASSOC);
+		$userID = $statement->fetch(PDO::FETCH_ASSOC);
 		$statement->closeCursor();
-		$id = $user['id'];
+		$id = $userID['id'];
 		
 	} catch (PDOException $e) {
 		$error_message = $e->getMessage();
