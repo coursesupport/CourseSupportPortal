@@ -34,10 +34,6 @@
 		$statement = $db->prepare($userInfo);
 		$statement->bindValue(':username', $username);
 		$statement->bindValue(':password', $password);
-		if (($firstname & $lastname) != '') {
-			$statement->bindValue('firstname', $firstname);
-			$statement->bindValue('lastname', $lastname);
-		}
 		$statement->execute();
 		
 		$user = $statement->fetch(PDO::FETCH_ASSOC);
