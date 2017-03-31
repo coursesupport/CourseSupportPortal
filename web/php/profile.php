@@ -29,7 +29,7 @@
 	}
 
 	try {
-		$userInfo = 'SELECT id, username, password FROM person WHERE username= :username AND password= :password';
+		$userInfo = 'SELECT id, username, password FROM users WHERE username= :username AND password= :password';
 		
 		$statement = $db->prepare($userInfo);
 		$statement->bindValue(':username', $username);
