@@ -5,12 +5,39 @@
 	$username = $_POST["loginname"];
 	$password = $_POST["password"];
 
+//Only use if creating a new account
+	$firstname = $_POST['new_firstname'];
+	$lastname = $_POST['new_lastname'];
+
+//Insert new user into the database
+	if (($firstname & $lastname) != '') {
+		try{
+			$new_user = 'INSERT INTO users (username, password, firstname, lastname) VALUES (username= :username, password= :password, firstname= :firstname, lastname= :lastname)';
+			$statement = $db->prepare($new_user);
+			$statement->bindValue(':username', $username);
+			$statement->bindValue(':password', $password);
+			$statement->bindValue(':firstname', $firstname);
+			$statement->bindValue(':lastname', $lastname);
+			$make_user = $statement->fetch(PDO::FETCH_ASSOC);
+			$statement->closeCursor();
+			
+		} catch (PDOException $e) {
+			$error_message = $e->getMessage();
+			echo "<p>Database error: $error_message </p>";
+			exit();
+		}
+	}
+
 	try {
 		$userInfo = 'SELECT id, username, password FROM person WHERE username= :username AND password= :password';
 		
 		$statement = $db->prepare($userInfo);
 		$statement->bindValue(':username', $username);
 		$statement->bindValue(':password', $password);
+		if (($firstname & $lastname) != '') {
+			$statement->bindValue('firstname', $firstname);
+			$statement->bindValue('lastname', $lastname);
+		}
 		$statement->execute();
 		
 		$user = $statement->fetch(PDO::FETCH_ASSOC);
