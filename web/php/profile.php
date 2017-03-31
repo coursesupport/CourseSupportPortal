@@ -23,7 +23,7 @@
 			
 		} catch (PDOException $e) {
 			$error_message = $e->getMessage();
-			echo "<p>Database error: $error_message </p>";
+			echo "<p>Database error: First try & $error_message </p>";
 			exit();
 		}
 	}
