@@ -13,6 +13,7 @@
 //Insert new user into the database
 	if (($firstname & $lastname) != '') {
 		try{
+			echo "Inserting new user...";
 			$new_user = 'INSERT INTO users (username, password, firstname, lastname, admin_type) VALUES (username= :username, password= :password, firstname= :firstname, lastname= :lastname, admin_type= :admin_type)';
 			$statement = $db->prepare($new_user);
 			$statement->bindValue(':username', $username);
