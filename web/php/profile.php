@@ -61,7 +61,7 @@
 
 <!DOCTYPE html>
 <html>
-    <title>W3.CSS Template</title>
+    <title>Course Support | Profile</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
@@ -80,7 +80,7 @@
                 <a href="#" class="w3-bar-item w3-button w3-padding-large">Course Support</a>
                 <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
                 <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-                <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><em><?php echo $user['firstname'] + ' ' + $user['lastname']; ?></em></a>
+                <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><em><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></em></a>
             </div>
         </div>
         
