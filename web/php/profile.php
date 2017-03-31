@@ -8,16 +8,18 @@
 //Only use if creating a new account
 	$firstname = $_POST['new_firstname'];
 	$lastname = $_POST['new_lastname'];
-
+	$admin_type = "Developer";
+	
 //Insert new user into the database
 	if (($firstname & $lastname) != '') {
 		try{
-			$new_user = 'INSERT INTO users (username, password, firstname, lastname) VALUES (username= :username, password= :password, firstname= :firstname, lastname= :lastname)';
+			$new_user = 'INSERT INTO users (username, password, firstname, lastname, admin_type) VALUES (username= :username, password= :password, firstname= :firstname, lastname= :lastname, admin_type= :admin_type)';
 			$statement = $db->prepare($new_user);
 			$statement->bindValue(':username', $username);
 			$statement->bindValue(':password', $password);
 			$statement->bindValue(':firstname', $firstname);
 			$statement->bindValue(':lastname', $lastname);
+			$statement->bindValue(':admin_type', $admin_type);
 			$make_user = $statement->fetch(PDO::FETCH_ASSOC);
 			$statement->closeCursor();
 			
