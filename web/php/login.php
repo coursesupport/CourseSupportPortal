@@ -3,8 +3,8 @@
 // Begin session for using the app with first checking for if user is still logged in
 	session_start();
 
-	require "heroku_access.php";
-	$db = get_db(); 
+	//require "heroku_access.php";
+	//$db = get_db(); 
 
 	$badLogin = false;
 
