@@ -28,11 +28,17 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 		
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
+            try {
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
 			$_SESSION['id'] = $row['id'];
 			header("Location: profile.php");
 			die(); // we always include a die after redirects.
+            }
+            catch (Exception $ex) {
+                echo "ERROR: Could not open profile.php. Details: $ex";
+                die();
+            }
 		}
 		else
 		{
