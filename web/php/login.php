@@ -108,7 +108,7 @@ else
 							<br/>
 							<input type="submit" />
 						</form>
-						<p>Don't have an account? Create one <a href="account_setup.html">here</a>!</p>
+						<p>Don't have an account? Create one <a href="account_setup.php">here</a>!</p>
 					</div>
 				</div>
 			</div>
