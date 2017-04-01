@@ -24,17 +24,23 @@ $username = htmlspecialchars($username);
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-// Creates a new user in the player table
-require("heroku_access.php");
-$db = get_db();
-$query = 'INSERT INTO users(username, password, firstname, lastname) VALUES(:username, :password, :firstname, :lastname)';
-$new_account = $db->prepare($query);
-$new_account->bindValue(':username', $username);
-$new_account->bindValue(':password', $hashedPassword);
-$new_account->bindValue(':firstname', $firstname);
-$new_account->bindValue(':lastname', $lastname);
-$new_account->execute();
-
+try {
+    // Creates a new user in the player table
+    require("heroku_access.php");
+    $db = get_db();
+    $query = 'INSERT INTO users(username, password, firstname, lastname) VALUES(:username, :password, :firstname, :lastname)';
+    $new_account = $db->prepare($query);
+    $new_account->bindValue(':username', $username);
+    $new_account->bindValue(':password', $hashedPassword);
+    $new_account->bindValue(':firstname', $firstname);
+    $new_account->bindValue(':lastname', $lastname);
+    $new_account->execute();
+}
+catch (Exception $ex)
+{
+    echo "ERROR: Could not create new user in Database. Details $ex";
+    die();
+}
 
 
 // The following section is commented out so that we can return to it later if it is deemed necessary to have a similar structure when creating the accounts into the database.
