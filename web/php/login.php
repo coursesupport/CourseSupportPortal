@@ -21,6 +21,7 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
+    try {
 	if ($result)
 	{
 		$row = $statement->fetch();
@@ -45,6 +46,11 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 			$badLogin = true;
 		}
 	}
+    }
+    catch (Exception $ex) {
+        echo "ERROR: Could not validate the result of receiving username from database. Details: $ex";
+        die();
+    }
 }
 else
 {
