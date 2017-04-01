@@ -1,5 +1,5 @@
 <?php
-	require "heroku_access.php";
+	/*require "heroku_access.php";
 	$db = get_db();
 
 	$username = $_POST["loginname"];
@@ -59,7 +59,7 @@
 		$error_message = $e->getMessage();
 		echo "<p>Database error: Third try & $error_message </p>";
 		exit();
-	}
+	}*/
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +93,7 @@
             <!-- Code Section -->
             <div class="w3-black" id="tour">
                 <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-                    <h2 class="w3-wide w3-center">Welcome <?php echo $user['firstname'] + ' ' + $user['lastname']; ?></h2>
+                    <!--<h2 class="w3-wide w3-center">Welcome <?php //echo $user['firstname'] + ' ' + $user['lastname']; ?></h2>-->
                     <p class="w3-opacity w3-center"><i>This is your customizable Dashboard</i></p>
                 </div>
             </div>
@@ -121,7 +121,7 @@
             <i class="fa fa-pinterest-p w3-hover-text-red"></i>
             <i class="fa fa-twitter w3-hover-text-light-blue"></i>
             <i class="fa fa-linkedin w3-hover-text-indigo"></i>
-            <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>Designed by Seth Childers and Jonathan Manoa</p>
         </footer>
     </body>
 </html>
