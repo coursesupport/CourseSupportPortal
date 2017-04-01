@@ -15,40 +15,55 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 	$password = $_POST['loginpass'];
 	
 	// Connect to the DB
+    try {
 	require("heroku_access.php");
 	$db = get_db();
 	$query = 'SELECT password, id FROM player WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
+    }
+    catch (Exception $ex)
+    {
+        echo "ERROR: Could not reach database. Details: $ex";
+        die();
+    }
+    
     try {
 	if ($result)
 	{
-		$row = $statement->fetch();
-		$hashedPasswordFromDB = $row['password'];
+        try {
+            $row = $statement->fetch();
+            $hashedPasswordFromDB = $row['password'];
 		
-		if (password_verify($password, $hashedPasswordFromDB))
-		{
-            try {
-			// password was correct, put the user on the session, and redirect to home
-			$_SESSION['username'] = $username;
-			$_SESSION['id'] = $row['id'];
-			header("Location: profile.php");
-			die(); // we always include a die after redirects.
+            if (password_verify($password, $hashedPasswordFromDB))
+            {
+                try {
+                    // password was correct, put the user on the session, and redirect to home
+                    $_SESSION['username'] = $username;
+                    $_SESSION['id'] = $row['id'];
+                    header("Location: profile.php");
+                    die(); // we always include a die after redirects.
+                }
+                catch (Exception $ex) {
+                    echo "ERROR: Could not open profile.php. Details: $ex";
+                    die();
+                }
             }
-            catch (Exception $ex) {
-                echo "ERROR: Could not open profile.php. Details: $ex";
-                die();
+            else
+            {
+                $badLogin = true;
             }
-		}
-		else
-		{
-			$badLogin = true;
-		}
-	}
+        }
+        catch (Exception $ex) {
+            echo "ERROR: Could not validate the result of receiving username from database. Details: $ex";
+            die();
+        }
     }
-    catch (Exception $ex) {
-        echo "ERROR: Could not validate the result of receiving username from database. Details: $ex";
+}   
+    catch(Exception $ex)
+    {
+        echo "ERROR: It broke! Details: $ex";
         die();
     }
 }
