@@ -31,7 +31,7 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
 			$_SESSION['id'] = $row['id'];
-			header("Location: machine.php");
+			header("Location: profile.php");
 			die(); // we always include a die after redirects.
 		}
 		else
@@ -108,7 +108,7 @@ else
 							<br/>
 							<input type="submit" />
 						</form>
-						<p>Don't have an account? Create one <a href="account_setup.php">here</a>!</p>
+						<p>Don't have an account? Create one <a href="account_setup.html">here</a>!</p>
 					</div>
 				</div>
 			</div>
