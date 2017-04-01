@@ -16,7 +16,7 @@ $lastname = $_POST['new_lastname'];
 if (!isset($username) || $username == "" 
     || !isset($password) || $password == "")
 {
-    header("Location: account_setup.html");
+    header("Location: account_setup.php");
     die();
 }
 
