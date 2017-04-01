@@ -12,6 +12,7 @@ $password = $_POST['new_pass'];
 $username = $_POST['new_user'];
 $firstname = $_POST['new_firstname'];
 $lastname = $_POST['new_lastname'];
+$admin_type = "Specialist";
 
 if (!isset($username) || $username == "" 
     || !isset($password) || $password == "")
@@ -28,12 +29,13 @@ try {
     // Creates a new user in the player table
     require("heroku_access.php");
     $db = get_db();
-    $query = 'INSERT INTO users(username, password, firstname, lastname) VALUES(:username, :password, :firstname, :lastname)';
+    $query = 'INSERT INTO users(username, password, firstname, lastname, admin_type) VALUES(:username, :password, :firstname, :lastname, :admin_type)';
     $new_account = $db->prepare($query);
     $new_account->bindValue(':username', $username);
     $new_account->bindValue(':password', $hashedPassword);
     $new_account->bindValue(':firstname', $firstname);
     $new_account->bindValue(':lastname', $lastname);
+    $new_account->bindValue(':admin_type', $admin_type);
     $new_account->execute();
 }
 catch (Exception $ex)
