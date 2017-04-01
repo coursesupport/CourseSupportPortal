@@ -18,7 +18,7 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
     try {
 	require("heroku_access.php");
 	$db = get_db();
-	$query = 'SELECT password, id FROM player WHERE username=:username';
+	$query = 'SELECT password, id FROM users WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
