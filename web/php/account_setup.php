@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-            <title>Course Support | Account Setup</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {font-family: "Lato", sans-serif}
-        .mySlides {display: none}
-    </style>
+		<title>Course Support | Account Setup</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="/images/favicon.ico" />
+		<style>
+        	body {font-family: "Lato", sans-serif}
+    	</style>
     </head>
     <body>
     
@@ -39,7 +41,7 @@
             <div class="w3-black" id="tour">
                 <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
                     <h2 class="w3-wide w3-center">Suit Up Here</h2>
-                    <p class="w3-opacity w3-center"><i>This is your first step to be coming Lengen... wait for it... dary</i></p>
+                    <p class="w3-opacity w3-center"><i>This is your first step to be coming Legen... wait for it... dary</i></p>
                     <form action="account_creation.php" method="post">
                         <ul class="w3-ul w3-border w3-white w3-text-grey">
                             <li class="w3-padding">First Name <input type="text" size="auto" name="new_firstname" required /></li>
