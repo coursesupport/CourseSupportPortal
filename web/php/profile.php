@@ -14,7 +14,7 @@
 	if (($firstname & $lastname) != '') {
 		try{
 			echo "Inserting new user...";
-			$new_user = 'INSERT INTO users (username, password, firstname, lastname, admin_type) VALUES (username= :username, password= :password, firstname= :firstname, lastname= :lastname, admin_type= :admin_type)';
+			$new_user = 'INSERT INTO users (username, password, firstname, lastname, admin_type) VALUES (:username, :password, :firstname, :lastname, :admin_type)';
 			$statement = $db->prepare($new_user);
 			$statement->bindValue(':username', $username);
 			$statement->bindValue(':password', $password);
@@ -71,6 +71,7 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../style.css" />
 	
 		<!-- favicon -->
 		<link rel="icon" type="image/png" href="/images/favicon.ico" />
@@ -120,12 +121,17 @@
         
         <!-- Footer -->
         <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+			<i class="brightspace"></i>
+			<i class="email"></i>
+			
+			<!--
             <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
             <i class="fa fa-instagram w3-hover-text-purple"></i>
             <i class="fa fa-snapchat w3-hover-text-yellow"></i>
             <i class="fa fa-pinterest-p w3-hover-text-red"></i>
             <i class="fa fa-twitter w3-hover-text-light-blue"></i>
             <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+			-->	
             <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>Designed by Seth Childers and Jonathan Manoa</p>
         </footer>
     </body>

@@ -97,7 +97,6 @@ else
 		<link rel="icon" type="image/png" href="/images/favicon.ico" />
 		<style>
 			body {font-family: "Lato", sans-serif}
-			.mySlides {display: none}
 		</style>
 	</head>
 	<body>
