@@ -1,5 +1,5 @@
 <?php
-	require "heroku_access.php";
+	/*require "heroku_access.php";
 	$db = get_db();
 
 	$username = $_POST["loginname"];
@@ -65,7 +65,7 @@
 		$error_message = $e->getMessage();
 		echo "<p>Database error: Third try & $error_message </p>";
 		exit();
-	}
+	}*/
 ?>
 
 <!DOCTYPE html>
