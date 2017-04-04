@@ -3,7 +3,7 @@
 	$db = get_db();
 
 	$username = $_POST["loginname"];
-	$password = $_POST["password"];
+	$password = $_POST["loginpass"];
 
 //Only use if creating a new account
 	$firstname = $_POST['new_firstname'];
