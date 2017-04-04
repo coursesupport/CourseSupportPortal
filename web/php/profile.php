@@ -45,6 +45,8 @@
 		$statement->closeCursor();
 		$id = $userID['id'];
 		
+		echo $userID['password'];
+		
 	} catch (PDOException $e) {
 		$error_message = $e->getMessage();
 		echo "<p>Database error: Second try & $error_message </p>";
