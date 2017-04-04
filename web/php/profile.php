@@ -73,12 +73,11 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../style.css" />
 	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="../jquery.js"></script>
+		
 		<!-- favicon -->
 		<link rel="icon" type="image/png" href="/images/favicon.ico" />
-   
-		<style>
-        	body {font-family: "Lato", sans-serif}
-		</style>
 	</head>
     <body>
         
