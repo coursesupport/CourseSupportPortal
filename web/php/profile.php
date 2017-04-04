@@ -11,7 +11,7 @@
 	$admin_type = "Specialist";
 	
 //Insert new user into the database
-	if ((!isset($firstname) || $lastname) || ($firstname || $lastname) != '') {
+	if ((isset($firstname) || $lastname) || ($firstname || $lastname) != '') {
 		try{
 			echo "Inserting new user...";
 			$new_user = 'INSERT INTO users (username, password, firstname, lastname, admin_type) VALUES (:username, :password, :firstname, :lastname, :admin_type)';
