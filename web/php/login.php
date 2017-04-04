@@ -92,12 +92,11 @@ else
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<link rel="stylesheet" href="../style.css" />
+
 		
 		<!-- favicon -->
 		<link rel="icon" type="image/png" href="/images/favicon.ico" />
-		<style>
-			body {font-family: "Lato", sans-serif}
-		</style>
 	</head>
 	<body>
 		
@@ -108,8 +107,6 @@ else
 				<a href="#" class="w3-bar-item w3-button w3-padding-large">Course Support</a>
 				<a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
 				<a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-				<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><em>Username</em></a>
-				<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
 			</div>
 		</div>
 		
@@ -128,7 +125,7 @@ else
 					<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
 						<h2 class="w3-wide w3-center">Sign in here</h2>
 						<p class="w3-opacity w3-center"><i>If you want to gain access that is...</i></p>
-						<form action="login.php" method="post">
+						<form action="profile.php" method="post">
 							<ul class="w3-ul w3-border w3-white w3-text-grey">
 								<li class="w3-padding">Username <input type="text" size="auto" name="loginname" required/></li>
 								<li class="w3-padding">Password <input type="password" size="auto" name="loginpass" required /></li>
