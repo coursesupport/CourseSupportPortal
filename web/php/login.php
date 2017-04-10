@@ -20,6 +20,7 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 	
 	// Connect to the DB
     try {
+		echo "<h1 style='color: pink;'>" . $username . "</h1>";
 	$query = 'SELECT password, username, id FROM users WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
