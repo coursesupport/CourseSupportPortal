@@ -8,6 +8,7 @@
 
 
 	$badLogin = false;
+echo "<h1 style='color: red;'>Red</h1>";
 
 // First check to see if we have post variables, if not, just
 // continue on as always.
@@ -17,10 +18,11 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 	// they have submitted a username and password for us to check
 	$username = $_POST['loginname'];
 	$password = $_POST['loginpass'];
-	
+	echo "<h1 style='color: green;'>if statement works: " . $username . "</h1>";
+
 	// Connect to the DB
     try {
-		echo "<h1 style='color: pink;'>" . $username . "</h1>";
+		echo "<h1 style='color: pink;'>try works: " . $username . "</h1>";
 	$query = 'SELECT password, username, id FROM users WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
