@@ -1,9 +1,13 @@
 <?php
 
 // Begin session for using the app with first checking for if user is still logged in
-session_start();
+	session_start();
 
-$badLogin = false;
+	require("heroku_access.php");
+	$db = get_db();
+
+
+	$badLogin = false;
 
 // First check to see if we have post variables, if not, just
 // continue on as always.
@@ -16,9 +20,7 @@ if (isset($_POST['loginname']) && isset($_POST['loginpass']))
 	
 	// Connect to the DB
     try {
-	require("heroku_access.php");
-	$db = get_db();
-	$query = 'SELECT password, id FROM users WHERE username=:username';
+	$query = 'SELECT password, username, id FROM users WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
