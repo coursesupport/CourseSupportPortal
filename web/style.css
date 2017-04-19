@@ -1,6 +1,10 @@
 body {
 	font-family: "Lato", sans-serif;
 }
+
+/**********************************
+Footer link CSS
+**********************************/
 .brightspace {
 	background-image: url(/images/brightspace.ico);
 	background-size: cover;
@@ -61,18 +65,47 @@ body {
 	justify-content: space-around;
 	max-width: 500px;
 }
+
+/**********************************
+Contact Section CSS
+**********************************/
 .contacts {
-	min-width: 200px;
+	min-width: 220px;
+}
+.contacts form {
+   display: none;
 }
 .contacts h4 {
 	text-align: center;
 }
-.contacts input {
-	border-radius: 35%;
+.contacts h4 input {
+    border-radius: 35%;
 	background: white;
 	border: none;
-	box-shadow: 0px 0px 2px lightgray;
+	box-shadow: 0px 0px 2px gray;
+    margin-left: 20px;
+    width: 30px;
 }
-.contacts input:hover {
-	box-shadow: 0px 0px 2px grey;
+.contacts h4 input:hover {
+	box-shadow: 0px 0px 4px lightgray;
+   cursor: pointer;
+}
+.contacts form input:nth-of-type(1) {
+   max-width: 160px;
+}
+.contacts form input:nth-of-type(2) {
+   max-width: 160px;
+}
+.contacts form input:nth-of-type(3) {
+   cursor: pointer;
+   margin-left: 95px;
+   width: 65px;
+   font-size: .8em;
+   border-radius: 10%;
+   background: lightgray;
+   border: none;
+   box-shadow: 0px 0px 2px gray;
+}
+.contacts form input:nth-of-type(3):hover {
+   box-shadow: 0px 0px 2px lightgray;
 }
