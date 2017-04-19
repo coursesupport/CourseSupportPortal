@@ -82,6 +82,9 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="../jquery.js"></script>
       
+      <script src="../javascript.js"></script>
+
+      
       <!-- favicon -->
       <link rel="icon" type="image/png" href="/images/favicon.ico" />
    </head>
