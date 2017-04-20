@@ -140,7 +140,7 @@
       <!-- Footer -->
       <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
          <div class="w3-container icons">
-            <div class="brightspace"></div>
+            <div class="brightspace" tooltip="brightspace"></div>
             <div class="pathway"></div>
             <div class="equella"></div>
             <div class="outlook"></div>
