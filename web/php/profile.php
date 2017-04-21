@@ -128,12 +128,22 @@
                   Donec in consequat sem, vitae mollis mi. Donec sed turpis tortor. Phasellus tristique ac quam at rhoncus. Suspendisse rutrum ante quis cursus accumsan. Nam sit amet felis id tortor vehicula molestie nec eget ligula. Cras eu sollicitudin libero, sed molestie ex. Nunc bibendum ligula nisi, non rhoncus lectus rhoncus eget.</p>
             </div>
             <div class="w3-container w3-cell w3-padding-12 contacts">
-               <h4>Contacts 
-                  <input type="button" name="show-form" value="+" onclick="addContacts();"/>
-               </h4>      
+               <span>
+                  <h4>Contacts</h4> 
+                  <input type="button" name="expand-contacts" value="+" onclick="addContacts();"/>
+               </span>     
                <form name="contacts-form" action="" method="post">
                   <input type="text" size="auto" name="name" placeholder="Name" />
                   <input type="text" size="auto" name="phone" placeholder="Phone number" />
+                  <input type="submit" value="Add" />
+               </form>
+               
+               <span>
+                  <h4>Notes</h4>
+                  <input type="button" name="expand-notes" value="+" onclick="addNotes();"/>
+               </span>
+               <form name="notes-form" action="" method="post">
+                  <textarea type="text" size="auto" name="notes" placeholder="Note"></textarea>
                   <input type="submit" value="Add" />
                </form>
             </div>

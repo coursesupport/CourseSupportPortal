@@ -3,7 +3,7 @@ body {
 }
 
 /**********************************
-Footer link CSS
+Footer Links CSS
 **********************************/
 .brightspace {
 	background-image: url(/images/brightspace.ico);
@@ -70,35 +70,35 @@ Footer link CSS
 Contact Section CSS
 **********************************/
 .contacts {
-	min-width: 220px;
+   width: 220px;
+}
+.contacts span {
+   display: flex;
+   justify-content: space-between; 
 }
 .contacts form {
    display: none;
+   flex-flow: column;
+   align-items: flex-end;
 }
-.contacts h4 {
-	text-align: center;
+span input {
+   border-radius: 35%;
+   background: white;
+   border: none;
+   box-shadow: 0px 0px 2px gray;
+   width: 30px;
+   height: 30px;
+   margin-top: 10px;
 }
-.contacts h4 input {
-    border-radius: 35%;
-	background: white;
-	border: none;
-	box-shadow: 0px 0px 2px gray;
-    margin-left: 20px;
-    width: 30px;
-}
-.contacts h4 input:hover {
-	box-shadow: 0px 0px 4px lightgray;
+span input:hover {
+   box-shadow: 0px 0px 4px lightgray;
    cursor: pointer;
 }
-.contacts form input:nth-of-type(1) {
-   max-width: 160px;
+textarea, input[type="text"] {
+   width: 100%;
 }
-.contacts form input:nth-of-type(2) {
-   max-width: 160px;
-}
-.contacts form input:nth-of-type(3) {
+input[type="submit"] {
    cursor: pointer;
-   margin-left: 95px;
    width: 65px;
    font-size: .8em;
    border-radius: 10%;
