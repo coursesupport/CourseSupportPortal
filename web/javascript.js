@@ -33,12 +33,8 @@ function passwordCheck () {
    var check = document.getElementsByName("new_pass2")[0];
    var check_val = check.value;
    
-   if (password_val == check_val) {
-      password.style.background = "green";
-   }
-   else if (password_val != check_val) {
+   while (password_val != check_val) {
       password.style.background = "red";
-   }
 }
 //function addField(arg1, arg2) {
 //   var form = "notes-form";
