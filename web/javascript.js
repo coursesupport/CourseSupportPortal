@@ -36,7 +36,7 @@ function passwordCheck () {
    if (password_val !== check_val) {
       password.style.background = "red";
    }
-   else uf (password_val === check_val) {
+   else if (password_val === check_val) {
       password.style.background = "green";
    }
 }
