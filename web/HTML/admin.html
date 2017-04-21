@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Course Support | Profile</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../style.css" />
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="../jquery.js"></script>
+      
+      <script src="../javascript.js"></script>
+      
+      <!-- favicon -->
+      <link rel="icon" type="image/png" href="/images/favicon.ico" />
+   </head>
+   <body>
+      
+      <!-- Navbar -->
+      <div class="w3-top">
+         <div class="w3-bar w3-black w3-card-2">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Course Support</a>
+            <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><em><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></em></a>
+         </div>
+      </div>
+      
+      <!-- Page content -->
+      <div class="w3-content" style="max-width:2000px;margin-top:46px">
+         
+         <!-- Code Section -->
+         <div class="w3-black">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+               <!--<h2 class="w3-wide w3-center">Welcome <?php //echo $user['firstname'] + ' ' + $user['lastname']; ?></h2>-->
+               <p class="w3-opacity w3-center"><i>This is your customizable Dashboard</i></p>
+            </div>
+         </div>
+         <!--            <div class="w3-white">-->
+         <div class="w3-container w3-white w3-content w3-padding-32" style="max-width:98%">
+            <div class="w3-container w3-cell content">
+               <p class="w3-opacity">What do you want to have here?
+                  <br/>
+                  <table>
+                      <tbody>
+                          <th>Permissions</th>
+                          <tr><td>Team Member Selection</td></tr>
+                          <tr><td>Team Change</td></tr>
+                          <tr><td>Admin Role</td></tr>
+                      </tbody>
+                  </table>
+                  <br/>
+                  <table>
+                      <tbody>
+                          <th>Announcements</th>
+                          <tr><td>Audience</td></tr>
+                          <tr><td>Team Change</td></tr>
+                          <tr><td>Admin Role</td></tr>
+                      </tbody>
+                  </table>
+                  <br/>
+                  <table>
+                      <tbody>
+                          <th>Other Ideas</th>
+                          <tr><td>I don't know what else could be added here.</td></tr>
+                          <tr><td>Talk with Zach and Sam.</td></tr>
+                          <tr><td>Admin Role</td></tr>
+                      </tbody>
+                  </table>
+                  <br/>
+                  Sed ornare ante eu enim consequat tristique. Sed rutrum lectus vel diam egestas, vel aliquet mauris pulvinar. Curabitur pellentesque pharetra sapien ac pulvinar. Fusce diam felis, ornare at blandit ut, dignissim in erat. Morbi interdum faucibus nisl, nec elementum arcu tempor non. Donec suscipit metus id libero accumsan dictum. Vestibulum ut faucibus felis, at imperdiet odio. Aliquam pellentesque condimentum turpis, at dictum libero semper at. Nunc laoreet a sapien non consectetur. Suspendisse vitae lacus dolor.
+                  <br/>
+                  Donec in consequat sem, vitae mollis mi. Donec sed turpis tortor. Phasellus tristique ac quam at rhoncus. Suspendisse rutrum ante quis cursus accumsan. Nam sit amet felis id tortor vehicula molestie nec eget ligula. Cras eu sollicitudin libero, sed molestie ex. Nunc bibendum ligula nisi, non rhoncus lectus rhoncus eget.</p>
+            </div>
+            <div class="w3-container w3-cell w3-padding-12 contacts">
+               <h4>Contacts 
+                  <input type="button" name="show-form" value="+" onclick="addContacts();"/>
+               </h4>      
+               <form name="contacts-form" action="" method="post">
+                  <input type="text" size="auto" name="name" placeholder="Name" />
+                  <input type="text" size="auto" name="phone" placeholder="Phone number" />
+                  <input type="submit" value="Add" />
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- End Page Content -->
+      <!--        </div>-->
+      
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-24 w3-center w3-opacity w3-light-grey w3-xlarge">
+         <div class="w3-container icons">
+            <div class="brightspace"></div>
+            <div class="pathway"></div>
+            <div class="equella"></div>
+            <div class="outlook"></div>
+            <div class="teamdynamix"></div>
+            <div class="workplace"></div>
+            <div class="coursecouncil"></div>
+            <div class="workday"></div>
+            <div class="portfolio"></div>
+         </div>
+         <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>Designed by Seth Childers and Jonathan Manoa</p>
+      </footer>
+   </body>
+</html>

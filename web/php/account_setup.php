@@ -48,6 +48,10 @@
                             <li class="w3-padding">Last Name <input type="text" size="auto" name="new_lastname" required /></li>
                             <li class="w3-padding">Username <input type="text" size="auto" name="new_user" required/></li>
                             <li class="w3-padding">Password <input type="password" size="auto" name="new_pass" required /></li>
+                            
+                            <!-- The re-entry of password can be validated with javascript easier than with php as well as throw an 
+                                 alert if it is not correct. -->
+                            <li class="w3-padding">Re-enter Password <input type="password" size="auto" name="new_pass2" required /></li>
                         </ul>
                         <br/>
                         <input type="submit" />

@@ -154,7 +154,7 @@
             <div class="workday"></div>
             <div class="portfolio"></div>
          </div>
-         <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>Designed by Seth Childers and Jonathan Manoa</p>
+         <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>Designed by Seth Childers and Island Thunder</p>
       </footer>
    </body>
 </html>
