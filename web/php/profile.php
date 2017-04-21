@@ -1,10 +1,13 @@
 <?php
-	/*require "heroku_access.php";
+	
+    Session_start();
+
+    require "heroku_access.php";
 	$db = get_db();
-
-	$username = $_POST["loginname"];
-	$password = $_POST["loginpass"];
-
+    
+	$firstname = $_SESSION["firstname"];
+	$lastname = $_SESSION["lastname"];
+/*
 //Only use if creating a new account
 	$firstname = $_POST['new_firstname'];
 	$lastname = $_POST['new_lastname'];
@@ -97,7 +100,7 @@
             <a href="#" class="w3-bar-item w3-button w3-padding-large">Course Support</a>
             <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
             <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-            <a href="#name" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><em><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></em></a>
+            <a href="#name" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><em><?php echo $firstname . ' ' . $lastname; ?></em></a>
          </div>
       </div>
       
@@ -107,7 +110,7 @@
          <!-- Code Section -->
          <div class="w3-black">
             <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-               <h2 class="w3-wide w3-center">Welcome <?php echo $user['firstname'] + ' ' + $user['lastname']; ?></h2>
+               <h2 class="w3-wide w3-center">Welcome <?php echo $firstname + ' ' + $lastname; ?></h2>
                <p class="w3-opacity w3-center"><i>This is your customizable Dashboard</i></p>
             </div>
          </div>
