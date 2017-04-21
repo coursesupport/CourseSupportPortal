@@ -10,9 +10,9 @@
 		
 		<!-- favicon -->
 		<link rel="icon" type="image/png" href="/images/favicon.ico" />
-		<style>
-        	body {font-family: "Lato", sans-serif}
-    	</style>
+       
+        <script src="../javascript.js"></script>
+       
     </head>
     <body>
     
@@ -51,7 +51,7 @@
                             
                             <!-- The re-entry of password can be validated with javascript easier than with php as well as throw an 
                                  alert if it is not correct. -->
-                            <li class="w3-padding">Re-enter Password <input type="password" size="auto" name="new_pass2" required /></li>
+                            <li class="w3-padding">Re-enter Password <input type="password" size="auto" name="new_pass2" onkeydown="passwordCheck();" required /></li>
                         </ul>
                         <br/>
                         <input type="submit" />

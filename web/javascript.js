@@ -27,6 +27,19 @@ function addNotes() {
    }
 }
 
+function passwordCheck () {
+   var password = document.getElementsByName("new_pass")[0];
+   var password_val = password.value;
+   var check = document.getElementsByName("new_pass2")[0];
+   var check_val = check.value;
+   
+   if (password_val !== check_val) {
+      password.style.background = "red";
+   }
+   else {
+      password.style.background = "green";
+   }
+}
 //function addField(arg1, arg2) {
 //   var form = "notes-form";
 //   if (arg2 != null) {
