@@ -33,24 +33,24 @@ function passwordCheck () {
    var check = document.getElementsByName("new_pass2")[0];
    var check_val = check.value;
    
-   while (password_val != check_val) {
-      password.style.background = "red";
-   }
+//   while (password_val != check_val) {
+//      password.style.background = "red";
+//   }
 }
 
-function addField(arg1, arg2) {
-   var form = "notes-form";
-   if (arg2 != null) {
-      form = "contacts-form";
-   }
-   if (visible_notes == false) {
-      document.getElementsByName("notes-form")[0].style.display = "flex";
-      document.getElementsByName("expand-notes")[0].value = "-";
-      visible_notes = true;
-   }
-   else {
-      document.getElementsByName("notes-form")[0].style.display = "none";
-      document.getElementsByName("expand-notes")[0].value = "+";
-      visible_notes = false;
-   }
-}
+//function addField(arg1, arg2) {
+//   var form = "notes-form";
+//   if (arg2 != null) {
+//      form = "contacts-form";
+//   }
+//   if (visible_notes == false) {
+//      document.getElementsByName("notes-form")[0].style.display = "flex";
+//      document.getElementsByName("expand-notes")[0].value = "-";
+//      visible_notes = true;
+//   }
+//   else {
+//      document.getElementsByName("notes-form")[0].style.display = "none";
+//      document.getElementsByName("expand-notes")[0].value = "+";
+//      visible_notes = false;
+//   }
+//}
