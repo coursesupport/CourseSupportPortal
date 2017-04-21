@@ -107,7 +107,7 @@
          <!-- Code Section -->
          <div class="w3-black">
             <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-               <!--<h2 class="w3-wide w3-center">Welcome <?php //echo $user['firstname'] + ' ' + $user['lastname']; ?></h2>-->
+               <h2 class="w3-wide w3-center">Welcome <?php echo $user['firstname'] + ' ' + $user['lastname']; ?></h2>
                <p class="w3-opacity w3-center"><i>This is your customizable Dashboard</i></p>
             </div>
          </div>
