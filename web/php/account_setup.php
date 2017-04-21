@@ -54,7 +54,7 @@
                             <li class="w3-padding">Re-enter Password <input type="password" size="auto" name="new_pass2" onkeydown="passwordCheck();" required /></li>
                         </ul>
                         <br/>
-                        <input type="submit" />
+                        <input type="submit" value="Submit"/>
                     </form>
                 </div>
             </div>

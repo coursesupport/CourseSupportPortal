@@ -35,6 +35,7 @@ function passwordCheck () {
    
    while (password_val != check_val) {
       password.style.background = "red";
+   }
 }
 //function addField(arg1, arg2) {
 //   var form = "notes-form";
