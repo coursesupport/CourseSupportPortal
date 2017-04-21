@@ -7,6 +7,7 @@
     
 	$firstname = $_SESSION['firstname'];
 	$lastname = $_SESSION['lastname'];
+    $username = $_SESSION['username'];
 /*
 //Only use if creating a new account
 	$firstname = $_POST['new_firstname'];
@@ -100,7 +101,7 @@
             <a href="#" class="w3-bar-item w3-button w3-padding-large">Course Support</a>
             <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
             <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-            <a href="#name" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><em><?php echo $firstname . ' ' . $lastname; ?></em></a>
+            <a href="#name" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><em><?php echo $username/*$firstname . ' ' . $lastname*/; ?></em></a>
          </div>
       </div>
       
@@ -110,7 +111,7 @@
          <!-- Code Section -->
          <div class="w3-black">
             <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-               <h2 class="w3-wide w3-center">Welcome <?php echo $firstname + ' ' + $lastname; ?></h2>
+               <h2 class="w3-wide w3-center">Welcome <?php echo $username/*$firstname . ' ' . $lastname*/; ?></h2>
                <p class="w3-opacity w3-center"><i>This is your customizable Dashboard</i></p>
             </div>
          </div>
