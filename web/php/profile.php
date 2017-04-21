@@ -5,8 +5,8 @@
     require "heroku_access.php";
 	$db = get_db();
     
-	$firstname = $_SESSION["firstname"];
-	$lastname = $_SESSION["lastname"];
+	$firstname = $_SESSION['firstname'];
+	$lastname = $_SESSION['lastname'];
 /*
 //Only use if creating a new account
 	$firstname = $_POST['new_firstname'];
