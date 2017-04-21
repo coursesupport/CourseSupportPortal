@@ -79,10 +79,7 @@ else
 // should just see the login form.
 ?>
 
-
-
 <!-- Login page in order to access user account -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,12 +89,10 @@ else
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 		<link rel="stylesheet" href="../style.css" />
 
-		
-		<!-- favicon -->
+		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="/images/favicon.ico" />
 	</head>
 	<body>
@@ -130,7 +125,7 @@ else
 						<form action="login.php" method="post">
 							<ul class="w3-ul w3-border w3-white w3-text-grey">
 								<li class="w3-padding">Username <input type="text" size="auto" name="loginname" required/></li>
-								<li class="w3-padding">Password <input type="password" size="auto" name="loginpass" required /></li>
+								<li class="w3-padding">Password&nbsp; <input type="password" size="auto" name="loginpass" required /></li>
 							</ul>
 							<br/>
 							<input type="submit" />
