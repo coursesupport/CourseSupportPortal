@@ -20,6 +20,9 @@ if (isset($_POST["name"]) && isset($_POST["phone"])) {
       echo "ERROR: Could not create new contact in Database. Details $ex";
    }
 }
+else {
+   echo "Nothing was added to the Database.";
+}
 if (isset($_POST["notes"])) {
    $newNote = $_POST["notes"];
 }
