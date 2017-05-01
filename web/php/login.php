@@ -132,7 +132,7 @@ else
                         <li class="w3-padding">Password&nbsp; <input type="password" size="auto" name="loginpass" required /></li>
                      </ul>
                      <br/>
-                     <input type="submit" />
+                     <input class="w3-bar-item w3-button" type="submit" />
                   </form>
                   <p>Don't have an account? Create one <a href="account_setup.php">here</a>!</p>
                </div>
