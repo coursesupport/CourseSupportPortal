@@ -41,7 +41,7 @@ $username = $_SESSION['username'];
             <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
             <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
             <a href="#name" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><em><?php echo $username/*$firstname . ' ' . $lastname*/; ?></em></a>
-            <a href="../HTML/logout.html" class="w3-bar-item w3-padding-large w3-hide-small w3-right">Logout</a>
+            <a href="../HTML/logout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Logout</a>
          </div>
       </div>
       
