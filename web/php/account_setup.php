@@ -8,6 +8,9 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
+      <!-- Used for the footer images -->
+      <script src="../jquery.js"></script>
+      
       <!-- favicon -->
       <link rel="icon" type="image/png" href="/images/favicon.ico" />
       
