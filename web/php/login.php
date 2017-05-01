@@ -111,17 +111,17 @@ else
          </div>
       </div>
       
-      <!-- Login Section -->
+      <!-- Login Container -->
       <div class="w3-content" style="max-width:2000px;margin-top:46px">
          
-         <!-- The Band Section -->
+         <!-- Header Section -->
          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
             <h2 class="w3-wide">Course Support Dashboard</h2>
             <p class="w3-opacity"><i>Login here</i></p>
             
             
             
-            <!-- The Tour Section -->
+            <!-- Login Section -->
             <div class="w3-black" id="tour">
                <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
                   <h2 class="w3-wide w3-center">Sign in here</h2>
