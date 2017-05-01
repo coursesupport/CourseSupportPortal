@@ -99,7 +99,7 @@ span input:hover {
 textarea, form > input[type="text"] {
    width: 100%;
 }
-input[type="submit"] {
+.contacts input[type="submit"] {
    cursor: pointer;
    width: 65px;
    font-size: .8em;
