@@ -5,10 +5,6 @@ session_start();
 require "heroku_access.php";
 $db = get_db();
 
-$firstname = $_SESSION['firstname'];
-$lastname = $_SESSION['lastname'];
-$username = $_SESSION['username'];
-
 if (isset($_POST["name"]) && isset($_POST["phone"])) {
    $newContact = $_POST["name"];
    $newPhone   = $_POST["phone"];
