@@ -95,7 +95,7 @@ span input:hover {
    cursor: pointer;
 }
 
-/*  Make sure this doesn't effect the login form  */
+/*  Make sure this doesn't affect the login form  */
 textarea, form > input[type="text"] {
    width: 100%;
 }
