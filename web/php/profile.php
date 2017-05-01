@@ -1,75 +1,14 @@
 <?php
-	
-    session_start();
 
-    require "heroku_access.php";
-	$db = get_db();
-    
-	$firstname = $_SESSION['firstname'];
-	$lastname = $_SESSION['lastname'];
-    $username = $_SESSION['username'];
-/*
-//Only use if creating a new account
-	$firstname = $_POST['new_firstname'];
-	$lastname = $_POST['new_lastname'];
-	$admin_type = "Specialist";
-	
-//Insert new user into the database
-	if ((isset($firstname) || $lastname) || ($firstname || $lastname) != '') {
-		try{
-			echo "Inserting new user...";
-			$new_user = 'INSERT INTO users (username, password, firstname, lastname, admin_type) VALUES (:username, :password, :firstname, :lastname, :admin_type)';
-			$statement = $db->prepare($new_user);
-			$statement->bindValue(':username', $username);
-			$statement->bindValue(':password', $password);
-			$statement->bindValue(':firstname', $firstname);
-			$statement->bindValue(':lastname', $lastname);
-			$statement->bindValue(':admin_type', $admin_type);
-			$statement->execute();
-			
-			$make_user = $statement->fetch(PDO::FETCH_ASSOC);
-			$statement->closeCursor();
-			
-		} catch (PDOException $e) {
-			$error_message = $e->getMessage();
-			echo "<p>Database error: First try & $error_message </p>";
-			exit();
-		}
-	}
+session_start();
 
-	try {
-		$userInfo = 'SELECT id, username, password FROM users WHERE username= :username AND password= :password';
-		
-		$statement = $db->prepare($userInfo);
-		$statement->bindValue(':username', $username);
-		$statement->bindValue(':password', $password);
-		$statement->execute();
-		
-		$userID = $statement->fetch(PDO::FETCH_ASSOC);
-		$statement->closeCursor();
-		$id = $userID['id'];
-		
-		echo $userID['password'];
-		
-	} catch (PDOException $e) {
-		$error_message = $e->getMessage();
-		echo "<p>Database error: Second try & $error_message </p>";
-		exit();
-	}
-	try {
-		$sql = 'SELECT id, firstname, lastname FROM users WHERE id= :id';
-		$statement = $db->prepare($sql);
-		$statement->bindValue(':id', $id);
-		$statement->execute();
-		
-		$user = $statement->fetch(PDO::FETCH_ASSOC);
-		$statement->closeCursor();
-		
-	} catch (PDOException $e) {
-		$error_message = $e->getMessage();
-		echo "<p>Database error: Third try & $error_message </p>";
-		exit();
-	}*/
+require "heroku_access.php";
+$db = get_db();
+
+$firstname = $_SESSION['firstname'];
+$lastname = $_SESSION['lastname'];
+$username = $_SESSION['username'];
+
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +26,7 @@
       <script src="../jquery.js"></script>
       
       <script src="../javascript.js"></script>
-
+      
       
       <!-- favicon -->
       <link rel="icon" type="image/png" href="/images/favicon.ico" />
@@ -121,10 +60,6 @@
                   <br/>
                   Sed ornare ante eu enim consequat tristique. Sed rutrum lectus vel diam egestas, vel aliquet mauris pulvinar. Curabitur pellentesque pharetra sapien ac pulvinar. Fusce diam felis, ornare at blandit ut, dignissim in erat. Morbi interdum faucibus nisl, nec elementum arcu tempor non. Donec suscipit metus id libero accumsan dictum. Vestibulum ut faucibus felis, at imperdiet odio. Aliquam pellentesque condimentum turpis, at dictum libero semper at. Nunc laoreet a sapien non consectetur. Suspendisse vitae lacus dolor.
                   <br/>
-                  Donec in consequat sem, vitae mollis mi. Donec sed turpis tortor. Phasellus tristique ac quam at rhoncus. Suspendisse rutrum ante quis cursus accumsan. Nam sit amet felis id tortor vehicula molestie nec eget ligula. Cras eu sollicitudin libero, sed molestie ex. Nunc bibendum ligula nisi, non rhoncus lectus rhoncus eget.
-                  <br/>
-                  Sed ornare ante eu enim consequat tristique. Sed rutrum lectus vel diam egestas, vel aliquet mauris pulvinar. Curabitur pellentesque pharetra sapien ac pulvinar. Fusce diam felis, ornare at blandit ut, dignissim in erat. Morbi interdum faucibus nisl, nec elementum arcu tempor non. Donec suscipit metus id libero accumsan dictum. Vestibulum ut faucibus felis, at imperdiet odio. Aliquam pellentesque condimentum turpis, at dictum libero semper at. Nunc laoreet a sapien non consectetur. Suspendisse vitae lacus dolor.
-                  <br/>
                   Donec in consequat sem, vitae mollis mi. Donec sed turpis tortor. Phasellus tristique ac quam at rhoncus. Suspendisse rutrum ante quis cursus accumsan. Nam sit amet felis id tortor vehicula molestie nec eget ligula. Cras eu sollicitudin libero, sed molestie ex. Nunc bibendum ligula nisi, non rhoncus lectus rhoncus eget.</p>
             </div>
             <div class="w3-container w3-cell w3-padding-12 contacts">
@@ -132,7 +67,7 @@
                   <h4>Contacts</h4> 
                   <input type="button" name="expand-contacts" value="+" onclick="addContacts();"/>
                </span>     
-               <form name="contacts-form" action="" method="post">
+               <form name="contacts-form" action="add_content.php" method="post">
                   <input type="text" size="auto" name="name" placeholder="Name" />
                   <input type="text" size="auto" name="phone" placeholder="Phone number" />
                   <input type="submit" value="Add" />

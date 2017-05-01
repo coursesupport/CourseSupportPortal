@@ -6,8 +6,6 @@
  * new row of conversation.
  **********************************************************/
 
-
-
 $password = $_POST['new_pass'];
 $username = $_POST['new_user'];
 $firstname = $_POST['new_firstname'];
