@@ -5,26 +5,25 @@ session_start();
 require "heroku_access.php";
 $db = get_db();
 
-if (isset($_POST["name"]) && isset($_POST["phone"])) {
    $newContact = $_POST["name"];
    $newPhone   = $_POST["phone"];
-   echo "Yeppers peppers $newContact";
-   try {
-      $query = 'INSERT INTO preferences(contact_name, contact_phone) VALUES(:newContact, newPhone)';
-      $add_contact = $db->prepare($query);
-      $add_contact->bindValue(':newContact', $newContact);
-      $add_contact->bindValue(':newPhone', $newPhone);
-      $add_contact->execute();
-   }
-   catch (Exception $ex) {
-      echo "ERROR: Could not create new contact in Database. Details $ex";
-   }
+
+if (!isset($newContact) || $newContact = "" || !isset($newPhone) || $newPhone = "") {
+   header("Location: profile.php");
+   die();
 }
-else {
-   echo "Nothing was added to the Database.";
+
+$username = htmlspecialchars($username);
+
+try {
+   $query = 'INSERT INTO preferences(newContact, newPhone) VALUES(:newContact, :newPhone)';
+   $add_contact = $db->prepare($query);
+   $add_contact->bindValue(':newContact', $newContact);
+   $add_contact->bindValue(':newPhone', $newPhone);
+   $add_contact->execute();
 }
-if (isset($_POST["notes"])) {
-   $newNote = $_POST["notes"];
+catch (Exception $ex) {
+   echo "ERROR: Could not create new contact in Database. Details $ex";
 }
 
 header("Location: profile.php");
