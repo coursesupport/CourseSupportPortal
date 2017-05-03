@@ -69,14 +69,14 @@ Footer Links CSS
 /**********************************
 Contact and Notes Section CSS
 **********************************/
-.contacts {
+.additions {
    width: 220px;
 }
-.contacts span {
+.additions span {
    display: flex;
    justify-content: space-between; 
 }
-.contacts form {
+.additions form {
    display: none;
    flex-flow: column;
    align-items: flex-end;
@@ -99,7 +99,7 @@ span input:hover {
 textarea, form > input[type="text"] {
    width: 100%;
 }
-.contacts input[type="submit"] {
+.additions input[type="submit"] {
    cursor: pointer;
    width: 65px;
    font-size: .8em;
@@ -108,6 +108,6 @@ textarea, form > input[type="text"] {
    border: none;
    box-shadow: 0px 0px 2px gray;
 }
-.contacts form input:nth-of-type(3):hover {
+.additions form input:nth-of-type(3):hover {
    box-shadow: 0px 0px 2px lightgray;
 }

@@ -8,7 +8,7 @@ $db = get_db();
 if (isset($_POST["name"]) && isset($_POST["phone"])) {
    $newContact = $_POST["name"];
    $newPhone   = $_POST["phone"];
-   
+   echo "Yeppers peppers $newContact";
    try {
       $query = 'INSERT INTO preferences(contact_name, contact_phone) VALUES(:newContact, newPhone)';
       $add_contact = $db->prepare($query);

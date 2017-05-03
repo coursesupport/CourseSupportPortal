@@ -63,7 +63,7 @@ $username = $_SESSION['username'];
                   <br/>
                   Donec in consequat sem, vitae mollis mi. Donec sed turpis tortor. Phasellus tristique ac quam at rhoncus. Suspendisse rutrum ante quis cursus accumsan. Nam sit amet felis id tortor vehicula molestie nec eget ligula. Cras eu sollicitudin libero, sed molestie ex. Nunc bibendum ligula nisi, non rhoncus lectus rhoncus eget.</p>
             </div>
-            <div class="w3-container w3-cell w3-padding-12 contacts">
+            <div class="w3-container w3-cell w3-padding-12 additions">
                <span>
                   <h4>Contacts</h4> 
                   <input type="button" name="expand-contacts" value="+" onclick="addContacts();"/>
