@@ -6,55 +6,55 @@ body {
 Footer Links CSS
 **********************************/
 .brightspace {
-	background-image: url(/images/brightspace.ico);
+	background-image: url(/images/icons/brightspace.ico);
 	background-size: cover;
 	width: 50px;
 	height: 50px;
 }
 .pathway {
-	background-image: url(images/pathway.ico);
+	background-image: url(images/icons/pathway.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .equella {
-	background-image: url(images/equella.ico);
+	background-image: url(images/icons/equella.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .outlook {
-	background-image: url(images/outlook.ico);
+	background-image: url(images/icons/outlook.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .teamdynamix {
-	background-image: url(images/teamdynamix.ico);
+	background-image: url(images/icons/teamdynamix.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .workplace {
-	background-image: url(images/workplace.ico);
+	background-image: url(images/icons/workplace.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .coursecouncil {
-	background-image: url(images/coursecouncil.ico);
+	background-image: url(images/icons/coursecouncil.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .workday {
-	background-image: url(images/workday.ico);
+	background-image: url(images/icons/workday.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;
 }
 .portfolio {
-	background-image: url(images/portfolio.ico);
+	background-image: url(images/icons/portfolio.ico);
 	background-size: contain;
 	width: 50px;
 	height: 50px;

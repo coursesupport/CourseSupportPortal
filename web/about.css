@@ -1,0 +1,63 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.slideshow-container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mySlides {
+    display: none;
+    width: 600px;;
+    height: 100%;
+}
+
+.image-container {  
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 10px 0px 15px;
+}
+
+.lower-image {
+    width: 400px;
+    height: 100%;
+}
+
+.footer-main {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 25px;
+}
+
+
+.left-slide, .right-slide {
+    color: black;
+    margin: auto;
+    font-size: 3em;
+    padding: 80px 150px ;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+/* Tools.html Specific CSS */
+h4 {
+    color: black;
+}
+.link-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.link-container > a {
+    width: 25%;
+    text-align: center;
+}

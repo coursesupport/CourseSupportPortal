@@ -38,8 +38,8 @@ $username = $_SESSION['username'];
          <div class="w3-bar w3-black w3-card-2">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-padding-large">Course Support</a>
-            <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
-            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+            <a href="../about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
             <a href="../HTML/logout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Logout</a>
             <a href="#name" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><em><?php echo $username/*$firstname . ' ' . $lastname*/; ?></em></a>
          </div>
