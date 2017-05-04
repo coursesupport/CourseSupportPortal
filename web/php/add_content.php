@@ -25,7 +25,7 @@ catch (Exception $ex) {
    echo "ERROR: Could not create new contact in Database. Details $ex";
 }
 
-header("Location: login.php");
+header("Location: profile.php");
 die();
 
 ?>
