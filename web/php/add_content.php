@@ -9,7 +9,7 @@ $db = get_db();
    $newPhone   = $_POST["phone"];
 
 if (!isset($newContact) || $newContact = "" || !isset($newPhone) || $newPhone = "") {
-   header("Location: profile.php");
+   header("Location: login.php");
    die();
 }
 
