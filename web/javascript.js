@@ -27,11 +27,15 @@ function addNotes() {
    }
 }
 
-function passwordCheck () {
-   var password = document.getElementsByName("new_pass")[0];
-   var password_val = password.value;
-   var check = document.getElementsByName("new_pass2")[0];
-   var check_val = check.value;
+function passwordCheck (password1, password2) {
+   if (password1 == password2) {
+      document.getElementsByName("new_pass2")[0].style.background = "red";
+   }
+   
+   //   var password = document.getElementsByName("new_pass")[0];
+//   var password_val = password.value;
+//   var check = document.getElementsByName("new_pass2")[0];
+//   var check_val = check.value;
    
 //   while (password_val != check_val) {
 //      password.style.background = "red";

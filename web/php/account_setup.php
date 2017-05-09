@@ -50,10 +50,10 @@
                      <li class="w3-padding">First Name <input type="text" size="auto" name="new_firstname" required /></li>
                      <li class="w3-padding">Last Name <input type="text" size="auto" name="new_lastname" required /></li>
                      <li class="w3-padding">Username <input type="text" size="auto" name="new_user" required/></li>
-                     <li class="w3-padding">Password <input type="password" size="auto" name="new_pass" required /></li>
+                     <li class="w3-padding">Password <input type="password" size="auto" name="new_pass" onkeydown="passwordCheck(new_pass, new_pass2);" required /></li>
                      
                      <!-- The re-entry of password can be validated with javascript easier than with php as well as throw an alert if it is not correct. -->
-                     <li class="w3-padding">Re-enter Password <input type="password" size="auto" name="new_pass2" onkeydown="passwordCheck();" required /></li>
+                     <li class="w3-padding">Re-enter Password <input type="password" size="auto" name="new_pass2" onkeydown="passwordCheck(new_pass, new_pass2);" required /></li>
                   </ul>
                   <br/>
                   <input type="submit" value="Submit"/>
