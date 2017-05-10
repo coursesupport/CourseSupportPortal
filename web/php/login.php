@@ -94,7 +94,7 @@ else
       
       <!-- Used for the footer images -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="../jquery.js"></script>
+      <script src="../javascript/jquery.js"></script>
       
       <!-- Favicon -->
       <link rel="icon" type="image/png" href="/images/favicon.ico" />

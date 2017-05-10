@@ -27,17 +27,13 @@ function addNotes() {
    }
 }
 
-function passwordCheck (password1, password2) {
-   if (password1 == password2) {
-      document.getElementsByName("new_pass2")[0].style.background = "red";
+function passwordCheck() {
+   pass1 = document.getElementsByName("new_pass")[0];
+   pass2 = document.getElementsByName("new_pass2")[0];
+   if (pass1.value == pass2.value) {
+      pass2.style.background = "green";
    }
-   
-   //   var password = document.getElementsByName("new_pass")[0];
-//   var password_val = password.value;
-//   var check = document.getElementsByName("new_pass2")[0];
-//   var check_val = check.value;
-   
-//   while (password_val != check_val) {
-//      password.style.background = "red";
-//   }
+   else {
+      pass2.style.background = "red";
+   }
 }

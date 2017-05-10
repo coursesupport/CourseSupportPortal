@@ -1,7 +1,6 @@
 var index = 0;
 var slide = document.getElementsByClassName("mySlides");
 
-
 function slideTransition(n) {
     hideSlide();
     index += n;
